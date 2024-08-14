@@ -19,18 +19,31 @@
     />
     <!-- <link rel="stylesheet" href="./assets/fonts/stylesheets.css" /> -->
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
   </head>
   <body>
-    <main>
+    <main id="home">
       <!--style="height: 5000px"-->
       <header class="fixed-header">
         <div class="content">
           <nav class="navbar">
             <!--logo-->
-            <img src="./assets/img/TBS_Radio_2020_logo.svg" alt="" />
+            <label for="menu-checkbox" class="toggle-menu">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                <path
+                  fill="currentColor"
+                  d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
+                />
+              </svg>
+            </label>
+            <img
+              class="logo"
+              src="./assets/img/TBS_Radio_2020_logo.svg"
+              alt=""
+            />
             <!--Navigation-->
             <ul>
-              <li><a href="#!">Home</a></li>
+              <li><a href="#home">Home</a></li>
               <li><a href="#!">Features</a></li>
               <li><a href="#!">Serviecs</a></li>
               <li><a href="#!">Resources</a></li>
@@ -44,348 +57,392 @@
           </nav>
         </div>
       </header>
-      <div class="hero-wrap">
-        <div class="content">
-          <div class="hero">
-            <div class="info">
-              <p class="sub-title">Welcome to Bensilk Agency</p>
-              <h1 class="title">Discover a place you'll love to live.</h1>
-              <p class="desc">
-                対象商品の良品ブックレットの交換を希望のお客様におかれましては
-                ブックレット以外は、お手元での保管をお願いいたします。
-              </p>
-              <a href="#!" class="btn hero-cta">More About Us</a>
-            </div>
-            <img
-              src="./assets/img/hero-img.svg"
-              alt="Discover a place you'll love to live"
-              class="hero-img"
-            />
-          </div>
-        </div>
-      </div>
-
-      <!--clients-->
-      <div class="clients">
-        <div class="content">
-          <div class="row">
-            <img src="" alt="" />
-            <!--star-->
-            <div class="stars">
-              <img src="./assets/img/star.svg" alt="" />
-              <img src="./assets/img/star.svg" alt="" />
-              <img src="./assets/img/star.svg" alt="" />
-              <img src="./assets/img/star.svg" alt="" />
-              <img src="./assets/img/star.svg" alt="" />
-            </div>
-          </div>
-          <div class="row row-desc">
-            <p class="desc">More than 45,000+ companies trust besnik</p>
-            <p class="desc">5 Star Ratings (2k+ Review)</p>
-          </div>
-          <div class="images">
-            <a href="#!">
-              <img src="./assets/img/client-1.svg" alt="" />
-            </a>
-            <a href="#!">
-              <img src="./assets/img/client-2.svg" alt="" />
-            </a>
-            <a href="#!">
-              <img src="./assets/img/client-3.svg" alt="" />
-            </a>
-            <a href="#!">
-              <img src="./assets/img/client-4.svg" alt="" />
-            </a>
-            <a href="#!">
-              <img src="./assets/img/client-5.svg" alt="" />
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="guides">
-        <div class="content">
-          <h2 class="sub-title">How its works?</h2>
-          <p class="desc">
-            Everything you need to know when you're looking to buy, rent, or
-            sell - all in one place.
-          </p>
-          <ul class="list-guide">
-            <li class="guide-item">
-              <img src="./assets/img/buyer.svg" alt="" class="icon" />
-              <h3 class="title">Buyer Guides</h3>
-              <a href="#!" class="link">
-                <span>How to buy</span>
-                <img src="./assets/img/arrow-right.svg" alt="" class="arrow" />
-              </a>
-            </li>
-            <li class="guide-item">
-              <img src="./assets/img/renter.svg" alt="" class="icon" />
-              <h3 class="title">Renter Guides</h3>
-              <a href="#!" class="link">
-                <span>How to buy</span>
-                <img src="./assets/img/arrow-right.svg" alt="" class="arrow" />
-              </a>
-            </li>
-            <li class="guide-item">
-              <img src="./assets/img/seller.svg" alt="" class="icon" />
-              <h3 class="title">Seller Guides</h3>
-              <a href="#!" class="link">
-                <span>How to buy</span>
-                <img src="./assets/img/arrow-right.svg" alt="" class="arrow" />
-              </a>
-            </li>
+      <!-- Tablet/mobile header -->
+      <header class="mobile-header">
+        <input
+          type="checkbox"
+          id="menu-checkbox"
+          class="menu-checkbox"
+          hidden
+        />
+        <!-- Overlay -->
+        <label for="menu-checkbox" class="menu-overlay"></label>
+        <div class="menu-drawer">
+          <!-- Logo -->
+          <a href="#">
+            <img src="./assets/img/logo (1).svg" alt="Besnik." />
+          </a>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#!">Features</a></li>
+            <li><a href="#!">Serviecs</a></li>
+            <li><a href="#!">Resources</a></li>
+            <li><a href="#!">Contact</a></li>
+            <li class="show-on-mobile separate"><a href="#!">Sign in</a></li>
+            <li class="show-on-mobile"><a href="#!">Sign up</a></li>
           </ul>
-          <div class="guide-cta">
-            <a href="#!" class="btn">Sell Full Guidelines</a>
+        </div>
+      </header>
+      <main>
+        <div class="hero-wrap">
+          <div class="content">
+            <div class="hero">
+              <div class="info">
+                <p class="sub-title">Welcome to Bensilk Agency</p>
+                <h1 class="title">Discover a place you'll love to live.</h1>
+                <p class="desc">
+                  対象商品の良品ブックレットの交換を希望のお客様におかれましては
+                  ブックレット以外は、お手元での保管をお願いいたします。
+                </p>
+                <a href="#!" class="btn hero-cta">More About Us</a>
+              </div>
+              <img
+                src="./assets/img/hero-img.svg"
+                alt="Discover a place you'll love to live"
+                class="hero-img"
+              />
+            </div>
           </div>
         </div>
-      </div>
-      <div class="featured">
-        <div class="content">
-          <header>
-            <h2 class="sub-title">Featured Properties</h2>
+
+        <!--clients-->
+        <div class="clients">
+          <div class="content">
             <div class="row">
-              <p class="desc">
-                Everything you need to know when you're looking
-              </p>
-              <a href="#!" class="link">
-                <span>View All Properties</span>
-                <img
-                  src="./assets/img/arrow-right.svg"
-                  alt="Arrow right"
-                  class="arrow"
-                />
-              </a>
-            </div>
-          </header>
-          <div class="list">
-            <!-- Featured item 1 -->
-            <div class="item">
-              <a href="#!">
-                <img
-                  src="./assets/img/haikyuu-final.webp"
-                  alt="Nikko Apartments"
-                  class="thumb"
-                />
-              </a>
-              <div class="body">
-                <h3 class="title">劇場版ハイキュー!! ゴミ捨て場の</h3>
-                <p class="desc">8502 Preston Rd. Inglewood, Maine 98280</p>
-                <div class="info">
-                  <img src="./assets/img/beds.svg" alt="" class="icon" />
-                  <span class="label">5 Beds</span>
-
-                  <img src="./assets/img/both.svg" alt="" class="icon" />
-                  <span class="label">2 both</span>
-
-                  <img src="./assets/img/sqft.svg" alt="" class="icon" />
-                  <span class="label">2000 Sqft</span>
-                </div>
+              <img src="" alt="" />
+              <!--star-->
+              <div class="stars">
+                <img src="./assets/img/star.svg" alt="" />
+                <img src="./assets/img/star.svg" alt="" />
+                <img src="./assets/img/star.svg" alt="" />
+                <img src="./assets/img/star.svg" alt="" />
+                <img src="./assets/img/star.svg" alt="" />
               </div>
             </div>
-
-            <!-- Featured item 2 -->
-            <div class="item">
+            <div class="row row-desc">
+              <p class="desc">More than 45,000+ companies trust besnik</p>
+              <p class="desc hide-on-mobile">5 Star Ratings (2k+ Review)</p>
+            </div>
+            <div class="images">
               <a href="#!">
+                <img src="./assets/img/client-1.svg" alt="" />
+              </a>
+              <a href="#!">
+                <img src="./assets/img/client-2.svg" alt="" />
+              </a>
+              <a href="#!">
+                <img src="./assets/img/client-3.svg" alt="" />
+              </a>
+              <a href="#!">
+                <img src="./assets/img/client-4.svg" alt="" />
+              </a>
+              <a href="#!">
+                <img src="./assets/img/client-5.svg" alt="" />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="guides">
+          <div class="content">
+            <h2 class="sub-title">How its works?</h2>
+            <p class="desc">
+              Everything you need to know when you're looking to buy, rent, or
+              sell - all in one place.
+            </p>
+            <ul class="list-guide">
+              <li class="guide-item">
+                <img src="./assets/img/buyer.svg" alt="" class="icon" />
+                <h3 class="title">Buyer Guides</h3>
+                <a href="#!" class="link">
+                  <span>How to buy</span>
+                  <img
+                    src="./assets/img/arrow-right.svg"
+                    alt=""
+                    class="arrow"
+                  />
+                </a>
+              </li>
+              <li class="guide-item">
+                <img src="./assets/img/renter.svg" alt="" class="icon" />
+                <h3 class="title">Renter Guides</h3>
+                <a href="#!" class="link">
+                  <span>How to buy</span>
+                  <img
+                    src="./assets/img/arrow-right.svg"
+                    alt=""
+                    class="arrow"
+                  />
+                </a>
+              </li>
+              <li class="guide-item">
+                <img src="./assets/img/seller.svg" alt="" class="icon" />
+                <h3 class="title">Seller Guides</h3>
+                <a href="#!" class="link">
+                  <span>How to buy</span>
+                  <img
+                    src="./assets/img/arrow-right.svg"
+                    alt=""
+                    class="arrow"
+                  />
+                </a>
+              </li>
+            </ul>
+            <div class="guide-cta">
+              <a href="#!" class="btn">Sell Full Guidelines</a>
+            </div>
+          </div>
+        </div>
+        <div id="features" class="featured">
+          <div class="content">
+            <header>
+              <h2 class="sub-title">Featured Properties</h2>
+              <div class="row">
+                <p class="desc">
+                  Everything you need to know when you're looking
+                </p>
+                <a href="#!" class="link">
+                  <span>View All Properties</span>
+                  <img
+                    src="./assets/img/arrow-right.svg"
+                    alt="Arrow right"
+                    class="arrow"
+                  />
+                </a>
+              </div>
+            </header>
+            <div class="list">
+              <!-- Featured item 1 -->
+              <div class="item">
+                <a href="#!">
+                  <img
+                    src="./assets/img/haikyuu-final.webp"
+                    alt="Nikko Apartments"
+                    class="thumb"
+                  />
+                </a>
+                <div class="body">
+                  <h3 class="title">劇場版ハイキュー!! ゴミ捨て場の</h3>
+                  <p class="desc">8502 Preston Rd. Inglewood, Maine 98280</p>
+                  <div class="info">
+                    <img src="./assets/img/beds.svg" alt="" class="icon" />
+                    <span class="label">5 Beds</span>
+
+                    <img src="./assets/img/both.svg" alt="" class="icon" />
+                    <span class="label">2 both</span>
+
+                    <img src="./assets/img/sqft.svg" alt="" class="icon" />
+                    <span class="label">2000 Sqft</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Featured item 2 -->
+              <div class="item">
+                <a href="#!">
+                  <img
+                    src="./assets/img/MV5BMWQyYjI2MjctYTI5Ni00Njg0LWIyMGEtN2IyM2UzYTc5YWRlXkEyXkFqcGc@._V1_.jpg"
+                    alt="CouCou Homestead"
+                    class="thumb"
+                  />
+                </a>
+                <div class="body">
+                  <h3 class="title">鬼滅の刃</h3>
+                  <p class="desc">8502 Preston Rd. Inglewood, Maine 98280</p>
+                  <div class="info">
+                    <img src="./assets/img/beds.svg" alt="" class="icon" />
+                    <span class="label">5 Beds</span>
+
+                    <img src="./assets/img/both.svg" alt="" class="icon" />
+                    <span class="label">2 both</span>
+
+                    <img src="./assets/img/sqft.svg" alt="" class="icon" />
+                    <span class="label">2000 Sqft</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Featured item 3 -->
+              <div class="item">
                 <img
-                  src="./assets/img/MV5BMWQyYjI2MjctYTI5Ni00Njg0LWIyMGEtN2IyM2UzYTc5YWRlXkEyXkFqcGc@._V1_.jpg"
+                  src="./assets/img/tbss-anime-divisions-gross-profit-falls-by-80-due-to-the-v0-0hjMY2vVBo9lYLY7K5qoVGcP7raiAQEFmTP9vy02feg.webp"
                   alt="CouCou Homestead"
                   class="thumb"
                 />
-              </a>
-              <div class="body">
-                <h3 class="title">鬼滅の刃</h3>
-                <p class="desc">8502 Preston Rd. Inglewood, Maine 98280</p>
-                <div class="info">
-                  <img src="./assets/img/beds.svg" alt="" class="icon" />
-                  <span class="label">5 Beds</span>
+                <div class="body">
+                  <h3 class="title">鬼滅の刃 ヒノカミ血風譚</h3>
+                  <p class="desc">8502 Preston Rd. Inglewood, Maine 98280</p>
+                  <div class="info">
+                    <img src="./assets/img/beds.svg" alt="" class="icon" />
+                    <span class="label">5 Beds</span>
 
-                  <img src="./assets/img/both.svg" alt="" class="icon" />
-                  <span class="label">2 both</span>
+                    <img src="./assets/img/both.svg" alt="" class="icon" />
+                    <span class="label">2 both</span>
 
-                  <img src="./assets/img/sqft.svg" alt="" class="icon" />
-                  <span class="label">2000 Sqft</span>
+                    <img src="./assets/img/sqft.svg" alt="" class="icon" />
+                    <span class="label">2000 Sqft</span>
+                  </div>
                 </div>
               </div>
             </div>
-
-            <!-- Featured item 3 -->
-            <div class="item">
-              <img
-                src="./assets/img/tbss-anime-divisions-gross-profit-falls-by-80-due-to-the-v0-0hjMY2vVBo9lYLY7K5qoVGcP7raiAQEFmTP9vy02feg.webp"
-                alt="CouCou Homestead"
-                class="thumb"
-              />
-              <div class="body">
-                <h3 class="title">鬼滅の刃 ヒノカミ血風譚</h3>
-                <p class="desc">8502 Preston Rd. Inglewood, Maine 98280</p>
-                <div class="info">
-                  <img src="./assets/img/beds.svg" alt="" class="icon" />
-                  <span class="label">5 Beds</span>
-
-                  <img src="./assets/img/both.svg" alt="" class="icon" />
-                  <span class="label">2 both</span>
-
-                  <img src="./assets/img/sqft.svg" alt="" class="icon" />
-                  <span class="label">2000 Sqft</span>
-                </div>
-              </div>
+            <div class="view-all show-on-mobile">
+              <a href="#!" class="btn">View All Properties</a>
             </div>
           </div>
         </div>
-      </div>
-      <!--STATS-->
-      <div class="stats">
-        <div class="content">
-          <div class="row">
-            <div class="img-block">
-              <img class="image" src="./assets/img/stats-img.jpg" alt="" />
-              <div class="stats-trend">
-                <div class="row">
-                  <strong class="value">40,000+</strong
-                  ><img
-                    src="./assets/img/arrow-trend-up.svg"
-                    alt=""
-                    class="icon"
-                  />
+
+        <!--STATS-->
+        <div class="stats">
+          <div class="content">
+            <div class="row">
+              <div class="img-block">
+                <img class="image" src="./assets/img/stats-img.jpg" alt="" />
+                <div class="stats-trend">
+                  <div class="row">
+                    <strong class="value">40,000+</strong
+                    ><img
+                      src="./assets/img/arrow-trend-up.svg"
+                      alt=""
+                      class="icon"
+                    />
+                  </div>
+                  <p class="desc">
+                    By avarage for 2 bedroom apments in San Francisco, CA
+                  </p>
+                  <div class="separate"></div>
+                  <div class="avatar-block">
+                    <div class="avatar-group">
+                      <img
+                        src="./assets/img/avatar-1.jpg"
+                        alt=""
+                        class="avatar"
+                      />
+                      <img
+                        src="./assets/img/avatar-2.jpg"
+                        alt=""
+                        class="avatar"
+                      />
+                    </div>
+                    <div class="avatar-group">
+                      <img
+                        src="./assets/img/avatar-3.jpg"
+                        alt=""
+                        class="avatar"
+                      />
+                      <img
+                        src="./assets/img/avatar-4.webp"
+                        alt=""
+                        class="avatar"
+                      />
+                      <img
+                        src="./assets/img/avatar-5.jpg"
+                        alt=""
+                        class="avatar"
+                      />
+                      <div class="avatar avatar-1">R</div>
+                    </div>
+                    <div class="avatar-group">
+                      <div class="avatar avatar-1">FJ</div>
+                      <img
+                        src="./assets/img/avatar-6.jpg"
+                        alt=""
+                        class="avatar"
+                      />
+                      <div class="avatar avatar-1">S</div>
+                    </div>
+                    <div class="avatar-group">
+                      <img
+                        src="./assets/img/avatar-7.jpeg"
+                        alt=""
+                        class="avatar"
+                      />
+                      <img
+                        src="./assets/img/avatar-8.jpg"
+                        alt=""
+                        class="avatar"
+                      />
+                      <img
+                        src="./assets/img/avatar-9.jpg"
+                        alt=""
+                        class="avatar"
+                      />
+                      <div class="avatar avatar-1">JJ</div>
+                    </div>
+                    <div class="avatar-group">
+                      <img
+                        src="./assets/img/avatar-10.jpg"
+                        alt=""
+                        class="avatar"
+                      />
+                      <div class="avatar avatar-1">QV</div>
+                    </div>
+                    <div class="avatar-group">
+                      <img
+                        src="./assets/img/avatar-11.jpg"
+                        alt=""
+                        class="avatar"
+                      />
+                      <img
+                        src="./assets/img/avatar-12.jpg"
+                        alt=""
+                        class="avatar"
+                      />
+                    </div>
+                    <div class="avatar-group">
+                      <img
+                        src="./assets/img/avatar-13.jfif"
+                        alt=""
+                        class="avatar"
+                      />
+                      <div class="avatar avatar-1">UI</div>
+                    </div>
+                  </div>
                 </div>
+              </div>
+              <div class="info">
+                <h2 class="sub-title">You ve found a neighborhood you love.</h2>
                 <p class="desc">
-                  By avarage for 2 bedroom apments in San Francisco, CA
+                  ご購入いただきましたお客様へ大変ご迷惑をお掛けいたしますこと、謹んでお詫び申し上げます。
+                  内容及び対応につきましては、以下にご案内いたします。ご確認くださいますようお願い申し上げます。
                 </p>
-                <div class="separate"></div>
-                <div class="avatar-block">
-                  <div class="avatar-group">
-                    <img
-                      src="./assets/img/avatar-1.jpg"
-                      alt=""
-                      class="avatar"
-                    />
-                    <img
-                      src="./assets/img/avatar-2.jpg"
-                      alt=""
-                      class="avatar"
-                    />
-                  </div>
-                  <div class="avatar-group">
-                    <img
-                      src="./assets/img/avatar-3.jpg"
-                      alt=""
-                      class="avatar"
-                    />
-                    <img
-                      src="./assets/img/avatar-4.webp"
-                      alt=""
-                      class="avatar"
-                    />
-                    <img
-                      src="./assets/img/avatar-5.jpg"
-                      alt=""
-                      class="avatar"
-                    />
-                    <div class="avatar avatar-1">R</div>
-                  </div>
-                  <div class="avatar-group">
-                    <div class="avatar avatar-1">FJ</div>
-                    <img
-                      src="./assets/img/avatar-6.jpg"
-                      alt=""
-                      class="avatar"
-                    />
-                    <div class="avatar avatar-1">S</div>
-                  </div>
-                  <div class="avatar-group">
-                    <img
-                      src="./assets/img/avatar-7.jpeg"
-                      alt=""
-                      class="avatar"
-                    />
-                    <img
-                      src="./assets/img/avatar-8.jpg"
-                      alt=""
-                      class="avatar"
-                    />
-                    <img
-                      src="./assets/img/avatar-9.jpg"
-                      alt=""
-                      class="avatar"
-                    />
-                    <div class="avatar avatar-1">JJ</div>
-                  </div>
-                  <div class="avatar-group">
-                    <img
-                      src="./assets/img/avatar-10.jpg"
-                      alt=""
-                      class="avatar"
-                    />
-                    <div class="avatar avatar-1">QV</div>
-                  </div>
-                  <div class="avatar-group">
-                    <img
-                      src="./assets/img/avatar-11.jpg"
-                      alt=""
-                      class="avatar"
-                    />
-                    <img
-                      src="./assets/img/avatar-12.jpg"
-                      alt=""
-                      class="avatar"
-                    />
-                  </div>
-                  <div class="avatar-group">
-                    <img
-                      src="./assets/img/avatar-13.jfif"
-                      alt=""
-                      class="avatar"
-                    />
-                    <div class="avatar avatar-1">UI</div>
-                  </div>
-                </div>
               </div>
             </div>
-            <div class="info">
-              <h2 class="sub-title">You ve found a neighborhood you love.</h2>
-              <p class="desc">
-                ご購入いただきましたお客様へ大変ご迷惑をお掛けいたしますこと、謹んでお詫び申し上げます。
-                内容及び対応につきましては、以下にご案内いたします。ご確認くださいますようお願い申し上げます。
-              </p>
-            </div>
-          </div>
-          <div class="row row-qty">
-            <div class="qty-item">
-              <strong class="qty">2,500</strong>
-              <p class="qty-desc">Blu-ray＆DVDにつきまして、</p>
-            </div>
-            <div class="qty-item">
-              <strong class="qty">5,000+</strong>
-              <p class="qty-desc">商品封入のブックレット</p>
-            </div>
-            <div class="qty-item">
-              <strong class="qty">170+</strong>
-              <p class="qty-desc">に誤植があることが発覚いたしました。</p>
+            <div class="row row-qty">
+              <div class="qty-item">
+                <strong class="qty">2,500</strong>
+                <p class="qty-desc">Blu-ray＆DVDにつきまして、</p>
+              </div>
+              <div class="qty-item">
+                <strong class="qty">5,000+</strong>
+                <p class="qty-desc">商品封入のブックレット</p>
+              </div>
+              <div class="qty-item">
+                <strong class="qty">170+</strong>
+                <p class="qty-desc">に誤植があることが発覚いたしました。</p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <!-- Subscription -->
-      <div class="subscription">
-        <div class="content">
-          <div class="body">
-            <div class="info">
-              <h2 class="sub-title line-clamp">営業時間：平日10:00〜13:00</h2>
-              <p class="desc line-clamp" style="--line-clamp: 3">
-                千葉県八千代市吉橋1095-1 GLP八千代2F gf.K内 五等分の花嫁
-                ブックレット交換窓
-              </p>
-              <a href="#!" class="btn">Subscribe</a>
+        <!-- Subscription -->
+        <div class="subscription">
+          <div class="content">
+            <div class="body">
+              <div class="info">
+                <h2 class="sub-title line-clamp">営業時間：平日10:00〜13:00</h2>
+                <p class="desc line-clamp" style="--line-clamp: 3">
+                  千葉県八千代市吉橋1095-1 GLP八千代2F gf.K内 五等分の花嫁
+                  ブックレット交換窓
+                </p>
+                <a href="#!" class="btn">Subscribe</a>
+              </div>
+              <img
+                src="./assets/img/newletter.svg"
+                alt="Subscribe to our Newsletter!"
+                class="image"
+              />
             </div>
-            <img
-              src="./assets/img/newletter.svg"
-              alt="Subscribe to our Newsletter!"
-              class="image"
-            />
           </div>
         </div>
-      </div>
+      </main>
       <!-- Footer -->
       <footer class="footer">
         <div class="content">
